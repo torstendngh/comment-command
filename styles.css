@@ -1,0 +1,234 @@
+@font-face {
+  font-family: "JetBrainsMono-SemiBold";
+  src: url("./JetBrainsMono-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+:root {
+  --main-font: "JetBrainsMono-SemiBold", monospace;
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --input-bg-color: #1e1e1e;
+  --input-border-color: #333;
+  --accent-color: #6200ee;
+  --accent-color-hover: #3700b3;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--main-font);
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+textarea,
+input[type="number"],
+select {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--input-bg-color);
+  color: var(--text-color);
+  border: 1px solid var(--input-border-color);
+  border-radius: 4px;
+  font-family: var(--main-font);
+  box-sizing: border-box;
+}
+
+textarea::placeholder {
+  color: #777;
+}
+
+pre {
+  background-color: var(--input-bg-color);
+  padding: 15px;
+  border-radius: 4px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-family: var(--main-font);
+  margin-top: 10px;
+  box-sizing: border-box;
+}
+
+.output {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+#copyBtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 6px 12px;
+  background-color: var(--accent-color);
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#copyBtn:hover {
+  background-color: var(--accent-color-hover);
+}
+
+.preset-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
+}
+
+.preset-option {
+  background-color: var(--input-bg-color);
+  color: var(--text-color);
+  padding: 10px;
+  border: 1px solid var(--input-border-color);
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: var(--main-font);
+  box-sizing: border-box;
+}
+
+.preset-option.selected {
+  border-color: var(--accent-color);
+}
+
+.preset-option:hover {
+  border-color: var(--accent-color);
+}
+
+.preset-option pre {
+  margin: 5px 0 0 0;
+  white-space: pre;
+}
+
+@media screen and (max-width: 600px) {
+  .preset-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  margin-top: 5px;
+  background: transparent;
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8px;
+  cursor: pointer;
+  background: var(--input-border-color);
+  border-radius: 4px;
+}
+
+input[type="range"]::-moz-range-track {
+  width: 100%;
+  height: 8px;
+  cursor: pointer;
+  background: var(--input-border-color);
+  border-radius: 4px;
+}
+
+input[type="range"]::-ms-track {
+  width: 100%;
+  height: 8px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  background: var(--accent-color);
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: -4px;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  background: var(--accent-color);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+input[type="range"]::-ms-thumb {
+  width: 16px;
+  height: 16px;
+  background: var(--accent-color);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Slider Thumb Hover */
+input[type="range"]::-webkit-slider-thumb:hover {
+  background: var(--accent-color-hover);
+}
+
+input[type="range"]::-moz-range-thumb:hover {
+  background: var(--accent-color-hover);
+}
+
+input[type="range"]::-ms-thumb:hover {
+  background: var(--accent-color-hover);
+}
+
+/* Slider Thumb Active */
+input[type="range"]::-webkit-slider-thumb:active {
+  background: var(--accent-color-hover);
+}
+
+input[type="range"]::-moz-range-thumb:active {
+  background: var(--accent-color-hover);
+}
+
+input[type="range"]::-ms-thumb:active {
+  background: var(--accent-color-hover);
+}
+
+/* For IE */
+input[type="range"]::-ms-fill-lower {
+  background: var(--input-border-color);
+  border-radius: 4px;
+}
+
+input[type="range"]::-ms-fill-upper {
+  background: var(--input-border-color);
+  border-radius: 4px;
+}

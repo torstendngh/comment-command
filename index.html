@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Text Box Generator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="output">
+        <label for="output">Output:</label>
+        <button id="copyBtn">Copy to Clipboard</button>
+        <pre id="output"></pre>
+      </div>
+      <h1>Text Box Generator</h1>
+      <div class="form-group">
+        <label for="comment">Enter your comment:</label>
+        <textarea
+          id="comment"
+          rows="4"
+          placeholder="Type your comment here..."
+        ></textarea>
+      </div>
+      <div class="form-group">
+        <label for="length">Box Width:</label>
+        <input type="number" id="length" value="40" min="10" max="100" />
+        <input type="range" id="lengthSlider" value="40" min="10" max="100" />
+      </div>
+      <div class="form-group">
+        <label for="horizontalPadding">Horizontal Padding:</label>
+        <input
+          type="number"
+          id="horizontalPadding"
+          value="1"
+          min="0"
+          max="10"
+        />
+        <input
+          type="range"
+          id="horizontalPaddingSlider"
+          value="1"
+          min="0"
+          max="10"
+        />
+      </div>
+      <div class="form-group">
+        <label for="verticalPadding">Vertical Padding:</label>
+        <input type="number" id="verticalPadding" value="0" min="0" max="10" />
+        <input
+          type="range"
+          id="verticalPaddingSlider"
+          value="0"
+          min="0"
+          max="10"
+        />
+      </div>
+      <div class="form-group">
+        <label>Select Box Style:</label>
+        <div id="presetContainer" class="preset-container"></div>
+      </div>
+      <div class="form-group">
+        <label for="commentStyle">Select Comment Style:</label>
+        <select id="commentStyle">
+          <option value="">None</option>
+          <option value="#">#</option>
+          <option value="//">//</option>
+          <option value="--">--</option>
+          <option value="; //">; //</option>
+        </select>
+      </div>
+    </div>
+
+    <script src="presets.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
